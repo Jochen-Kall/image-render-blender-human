@@ -1,0 +1,708 @@
+{
+    "sSkeletonType": "IMS",
+    "lBones": [
+        {
+            "sType": "IMS",
+            "sName": "LEFT_EAR_INTERTRAGIC_NOTCH_BOSCH_V1",
+            "lHead": [
+                0.44845402240753174,
+                1.3313181400299072,
+                0.8026186227798462
+            ],
+            "lTail": [
+                0.44845402240753174,
+                1.341318130493164,
+                0.8026186227798462
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;LEFT_EAR_INTERTRAGIC_NOTCH_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "LEFT_EAR_INTERTRAGIC_NOTCH_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                },
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;LEFT_EAR_INTERTRAGIC_NOTCH_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "LEFT_EAR_INTERTRAGIC_NOTCH_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "RIGHT_EYE_LID_LOWER_CENTER_BOSCH_V1",
+            "lHead": [
+                0.342498242855072,
+                1.2443606853485107,
+                0.8297065496444702
+            ],
+            "lTail": [
+                0.342498242855072,
+                1.2543606758117676,
+                0.8297065496444702
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;RIGHT_EYE_LID_LOWER_CENTER_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "RIGHT_EYE_LID_LOWER_CENTER_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "RIGHT_EYE_OUTER_CORNER_BOSCH_V1",
+            "lHead": [
+                0.3299192786216736,
+                1.2527968883514404,
+                0.8350073099136353
+            ],
+            "lTail": [
+                0.3299192786216736,
+                1.2627968788146973,
+                0.8350073099136353
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;RIGHT_EYE_OUTER_CORNER_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "RIGHT_EYE_OUTER_CORNER_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "RIGHT_EYE_INNER_CORNER_BOSCH_V1",
+            "lHead": [
+                0.35752561688423157,
+                1.2474831342697144,
+                0.8313170671463013
+            ],
+            "lTail": [
+                0.35752561688423157,
+                1.2574831247329712,
+                0.8313170671463013
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;RIGHT_EYE_INNER_CORNER_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "RIGHT_EYE_INNER_CORNER_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "LEFT_EYE_INNER_CORNER_BOSCH_V1",
+            "lHead": [
+                0.3956335186958313,
+                1.2468582391738892,
+                0.831299901008606
+            ],
+            "lTail": [
+                0.3956335186958313,
+                1.256858229637146,
+                0.831299901008606
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;LEFT_EYE_INNER_CORNER_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "LEFT_EYE_INNER_CORNER_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "LEFT_EYE_OUTER_CORNER_BOSCH_V1",
+            "lHead": [
+                0.4233514666557312,
+                1.2526942491531372,
+                0.8350318670272827
+            ],
+            "lTail": [
+                0.4233514666557312,
+                1.262694239616394,
+                0.8350318670272827
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;LEFT_EYE_OUTER_CORNER_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "LEFT_EYE_OUTER_CORNER_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "LEFT_EYE_LID_LOWER_CENTER_BOSCH_V1",
+            "lHead": [
+                0.4131092131137848,
+                1.2445818185806274,
+                0.8297609090805054
+            ],
+            "lTail": [
+                0.4131092131137848,
+                1.2545818090438843,
+                0.8297609090805054
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;LEFT_EYE_LID_LOWER_CENTER_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "LEFT_EYE_LID_LOWER_CENTER_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "LEFT_EYE_LID_UPPER_CENTER_BOSCH_V1",
+            "lHead": [
+                0.4095185399055481,
+                1.2416818141937256,
+                0.839302659034729
+            ],
+            "lTail": [
+                0.4095185399055481,
+                1.2516818046569824,
+                0.839302659034729
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;LEFT_EYE_LID_UPPER_CENTER_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "LEFT_EYE_LID_UPPER_CENTER_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "RIGHT_EAR_INTERTRAGIC_NOTCH_BOSCH_V1",
+            "lHead": [
+                0.30479276180267334,
+                1.3313407897949219,
+                0.8026291131973267
+            ],
+            "lTail": [
+                0.30479276180267334,
+                1.3413407802581787,
+                0.8026291131973267
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;RIGHT_EAR_INTERTRAGIC_NOTCH_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "RIGHT_EAR_INTERTRAGIC_NOTCH_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "RIGHT_NOSTRIL_SILL_BOSCH_V1",
+            "lHead": [
+                0.3634888529777527,
+                1.2322498559951782,
+                0.7917951345443726
+            ],
+            "lTail": [
+                0.3634888529777527,
+                1.242249846458435,
+                0.7917951345443726
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;RIGHT_NOSTRIL_SILL_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "RIGHT_NOSTRIL_SILL_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "LEFT_NOSTRIL_SILL_BOSCH_V1",
+            "lHead": [
+                0.38963040709495544,
+                1.2321979999542236,
+                0.791772723197937
+            ],
+            "lTail": [
+                0.38963040709495544,
+                1.2421979904174805,
+                0.791772723197937
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;LEFT_NOSTRIL_SILL_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "LEFT_NOSTRIL_SILL_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "RIGHT_SUB_NASAL_WING_BOSCH_V1",
+            "lHead": [
+                0.3615454137325287,
+                1.2373697757720947,
+                0.7881451845169067
+            ],
+            "lTail": [
+                0.3615454137325287,
+                1.2473697662353516,
+                0.7881451845169067
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;RIGHT_SUB_NASAL_WING_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "RIGHT_SUB_NASAL_WING_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "LEFT_SUB_NASAL_WING_BOSCH_V1",
+            "lHead": [
+                0.3924659788608551,
+                1.2357637882232666,
+                0.789321780204773
+            ],
+            "lTail": [
+                0.3924659788608551,
+                1.2457637786865234,
+                0.789321780204773
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;LEFT_SUB_NASAL_WING_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "LEFT_SUB_NASAL_WING_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "SUBNASAL_BOSCH_V1",
+            "lHead": [
+                0.37685060501098633,
+                1.230633020401001,
+                0.7863200902938843
+            ],
+            "lTail": [
+                0.37685060501098633,
+                1.2406330108642578,
+                0.7863200902938843
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;SUBNASAL_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "SUBNASAL_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "RIGHT_MOUTH_CORNER_BOSCH_V1",
+            "lHead": [
+                0.350242018699646,
+                1.2432044744491577,
+                0.7643991708755493
+            ],
+            "lTail": [
+                0.350242018699646,
+                1.2532044649124146,
+                0.7643991708755493
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;RIGHT_MOUTH_CORNER_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "RIGHT_MOUTH_CORNER_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "LEFT_MOUTH_CORNER_BOSCH_V1",
+            "lHead": [
+                0.40302902460098267,
+                1.2430866956710815,
+                0.7644504308700562
+            ],
+            "lTail": [
+                0.40302902460098267,
+                1.2530866861343384,
+                0.7644504308700562
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;LEFT_MOUTH_CORNER_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "LEFT_MOUTH_CORNER_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        },
+        {
+            "sType": "IMS",
+            "sName": "RIGHT_EYE_LID_UPPER_CENTER_BOSCH_V1",
+            "lHead": [
+                0.3434090316295624,
+                1.2418333292007446,
+                0.8384805917739868
+            ],
+            "lTail": [
+                0.3434090316295624,
+                1.251833438873291,
+                0.8384805917739868
+            ],
+            "sParent": "head",
+            "fEnvelope": 0.25,
+            "fHeadRadius": 0.10000000149011612,
+            "lConstraints": [
+                {
+                    "sType": "COPY_LOCATION",
+                    "sBone": "AT.Label;IMS;RIGHT_EYE_LID_UPPER_CENTER_BOSCH_V1",
+                    "sTarget": "HG_Body.001",
+                    "sSubtarget": "RIGHT_EYE_LID_UPPER_CENTER_BOSCH",
+                    "bUseX": true,
+                    "bUseY": true,
+                    "bUseZ": true,
+                    "bInvertX": false,
+                    "bInvertY": false,
+                    "bInvertZ": false,
+                    "sTargetSpace": "WORLD",
+                    "sOwnerSpace": "WORLD",
+                    "fInfluence": 1.0
+                }
+            ]
+        }
+    ],
+    "lLabelVertices":[
+        {
+            "sObject":"HG_Body",
+            "lLabels": [
+                {
+                    "sName": "RIGHT_EYE_LID_LOWER_CENTER_BOSCH",
+                    "lVertices": [
+                        3822
+                    ]
+                },
+                {
+                    "sName": "RIGHT_EYE_OUTER_CORNER_BOSCH",
+                    "lVertices": [
+                        3900
+                    ]
+                },
+                {
+                    "sName": "RIGHT_EYE_INNER_CORNER_BOSCH",
+                    "lVertices": [
+                        3535
+                    ]
+                },
+                {
+                    "sName": "RIGHT_EYE_LID_UPPER_CENTER_BOSCH",
+                    "lVertices": [
+                        3872
+                    ]
+                },
+                {
+                    "sName": "LEFT_EYE_INNER_CORNER_BOSCH",
+                    "lVertices": [
+                        1088
+                    ]
+                },
+                {
+                    "sName": "LEFT_EYE_OUTER_CORNER_BOSCH",
+                    "lVertices": [
+                        896
+                    ]
+                },
+                {
+                    "sName": "LEFT_EYE_LID_LOWER_CENTER_BOSCH",
+                    "lVertices": [
+                        1760
+                    ]
+                },
+                {
+                    "sName": "LEFT_EYE_LID_UPPER_CENTER_BOSCH",
+                    "lVertices": [
+                        768
+                    ]
+                },
+                {
+                    "sName": "LEFT_EAR_INTERTRAGIC_NOTCH_BOSCH",
+                    "lVertices": [
+                        3346
+                    ]
+                },
+                {
+                    "sName": "RIGHT_EAR_INTERTRAGIC_NOTCH_BOSCH",
+                    "lVertices": [
+                        5718
+                    ]
+                },
+                {
+                    "sName": "RIGHT_NOSTRIL_SILL_BOSCH",
+                    "lVertices": [
+                        8670
+                    ]
+                },
+                {
+                    "sName": "LEFT_NOSTRIL_SILL_BOSCH",
+                    "lVertices": [
+                        2328
+                    ]
+                },
+                {
+                    "sName": "RIGHT_SUB_NASAL_WING_BOSCH",
+                    "lVertices": [
+                        4683
+                    ]
+                },
+                {
+                    "sName": "LEFT_SUB_NASAL_WING_BOSCH",
+                    "lVertices": [
+                        2063
+                    ]
+                },
+                {
+                    "sName": "SUBNASAL_BOSCH",
+                    "lVertices": [
+                        2223
+                    ]
+                },
+                {
+                    "sName": "RIGHT_MOUTH_CORNER_BOSCH",
+                    "lVertices": [
+                        4826
+                    ]
+                },
+                {
+                    "sName": "LEFT_MOUTH_CORNER_BOSCH",
+                    "lVertices": [
+                        7469
+                    ]
+                }
+            ]
+        }
+    ]
+
+}

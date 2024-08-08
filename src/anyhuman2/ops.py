@@ -30,43 +30,47 @@ import bpy
 import mathutils
 import math
 
-import random
 
-import warnings
-import json
+import random
 
 from typing import Optional
 from anybase import convert
 
 from .cls_humgen import SingletonHumGenWrapper
 
-from .paramgenerators import ComputeParams, ResolveRandomParams
+from .paramgenerators import ComputeParams
+from .paramgenerators import SaveGeneratedParams
 
 try:
-    from humgen3d.API import HG_Human, HG_Batch_Generator
+    from HumGen3D import Human as HG_Human
 except Exception as xEx:
     print("Error initializing anyhuman module:\n{}".format(str(xEx)))
-# endtry
+# HumGen V3 Legacy
+# try:
+#     from humgen3d.API import HG_Human, HG_Batch_Generator
+# except Exception as xEx:
+#     print("Error initializing anyhuman module:\n{}".format(str(xEx)))
+# # endtry
 
 
-##############################################################################################################
+###############################################################################
 def GenerateHuman(_dicParams, **kwargs):
     """
     Function for generating any human.
 
-    It uses the HumGenWrapper class for first computation of a set of parameters that
-    then will be used to create the human.
+    It uses the HumGenWrapper class for first computation of a set of 
+    parameters that then will be used to create the human.
 
     The computation of parameters can be based on different approaches as full randomization,
-    randomization by a Zwicky-Box specifcation, or directly by given parameters. For a detailed description,
+    randomization by a Zwicky-Box specification, or directly by given parameters. For a detailed description,
     see the HumGenWrapper class.
 
-    The _dicParams dictionaly can contain the keys:
+    The _dicParams dictionary can contain the keys:
     - sId: name that should be used for the generated blender object
     - xSeed: object for seeding the randomization
     - sMode: mode for computation of the parameters of the human
     - mParamConfig: dict with parameters for the parameter computation, see HumGenWrapper
-    - mOverwrite: dict with parameters that should be used to overwrite the computed paramter values
+    - mOverwrite: dict with parameters that should be used to overwrite the computed parameter values
     - bDeleteBackup: set to False to prevent the deletion of the humgen backup human
         that is necessary for certain operations
 
@@ -81,56 +85,50 @@ def GenerateHuman(_dicParams, **kwargs):
         Blender object
     """
 
-    # print("Starting Generate Human")
-
     # set a seed for the following randomization
+    # used to generate reproducible humans
     if "xSeed" in _dicParams:
         import numpy as np
-        import random
 
         np_seed = hash(_dicParams["xSeed"]) % (2**32)
 
         random.seed(_dicParams["xSeed"])
-        np.random.seed(np_seed)
+        # np.random.seed(np_seed)
+        rnd = random.Random(np_seed)
+    else:
+        rnd = random.Random(None)
+    # endif
 
-    mode = _dicParams.get("sMode", "RANDOM_REALISTIC")
 
-    lHumanGenerator = SingletonHumGenWrapper()
+    mode:str = _dicParams.get("sMode", "RANDOM_REALISTIC")
 
-    params = _dicParams.get("mParamConfig", {})
-
-    if "sGender" in _dicParams:
-        warnings.warn(
-            "Warning: Using sGender directly in the params of GenerateHuman is deprecated,"
-            " please set it in mParamConfig instead",
-            DeprecationWarning,
-            stacklevel=2,
-        )
-        params["gender"] = _dicParams["sGender"]
+    xHumanGenerator = SingletonHumGenWrapper()
 
     overwrite = _dicParams.get("mOverwrite", {})
-
     # gender = _dicParams["sGender"]
 
     # first compute the parameters that should be used for the creation of the human
-    generator_params = ComputeParams(mode, params, overwrite, lHumanGenerator.generator_config)
-
+    generated_params:dict = ComputeParams(mode, _dicParams, overwrite, xHumanGenerator.generator_config, rnd)
+    # Save to json File if bSave in mParamConfig is True
+    SaveGeneratedParams(_dicParams, generated_params)
+        
     # apply
     # params['posefilename'] =_dicParams.get('sPosefile')
 
-    objX = lHumanGenerator.CreateHuman(
-        _sName=_dicParams["sId"],
-        _mParams=generator_params,
-        _bDeleteBackup=_dicParams.get("bDeleteBackup", True),
-    )
+    # if _dicParams.get("sMode") == "FILE":
+    #     objX = lHumanGenerator.CreateHumanFromJSON(params["sFilename"])
+    # elif _dicParams.get("sMode") == "FULL_RANDOM":
+    #     objX = lHumanGenerator.CreateFullRandomHuman(params["sGender"])
+    # else:
+    #     objX = lHumanGenerator.CreateHuman(params, generated_params)
+    objX = xHumanGenerator.CreateHuman(generated_params)
 
-    objX["generator_param_dict"] = json.dumps(generator_params)
+    # objX["generator_param_dict"] = json.dumps(generated_params)
 
     return objX
 
 
 # enddef
-
 
 ##############################################################################################################
 def ModifyHumanPostCreation(_objX, _dicParams, sMode, **kwargs):
@@ -145,12 +143,12 @@ def ModifyHumanPostCreation(_objX, _dicParams, sMode, **kwargs):
         Dictionary with configuration arguments
     """
 
-    if "xSeed" in _dicParams:
-        import numpy as np
-        import random
+    # if "xSeed" in _dicParams:
+    #     import numpy as np
+    #     import random
 
-        random.seed(_dicParams["xSeed"])
-        np.random.seed(hash(_dicParams["xSeed"]) % (2**32))
+    #     random.seed(_dicParams["xSeed"])
+    #     np.random.seed(hash(_dicParams["xSeed"]) % (2**32))
 
     # first, make sure that nothing is selected in the scene
     # and activate the human

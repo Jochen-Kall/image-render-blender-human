@@ -1,0 +1,143 @@
+{
+    "lLabelVertices": [
+        {
+            "sObject": "HG_Body.001",
+            "lLabels": [
+                {
+                    "sName": "WFLW_33",
+                    "lVertices": [
+                        3635,
+                        3653,
+                        3655
+                    ]
+                },
+                {
+                    "sName": "WFLW_34",
+                    "lVertices": [
+                        3624,
+                        3627
+                    ]
+                },
+                {
+                    "sName": "WFLW_35",
+                    "lVertices": [
+                        3576,
+                        3583,
+                        3586,
+                        3663
+                    ]
+                },
+                {
+                    "sName": "WFLW_36",
+                    "lVertices": [
+                        3578,
+                        3581
+                    ]
+                },
+                {
+                    "sName": "WFLW_37",
+                    "lVertices": [
+                        3687,
+                        3732,
+                        3735
+                    ]
+                },
+                {
+                    "sName": "WFLW_38",
+                    "lVertices": [
+                        3683,
+                        3686,
+                        3690
+                    ]
+                },
+                {
+                    "sName": "WFLW_39",
+                    "lVertices": [
+                        3572
+                    ]
+                },
+                {
+                    "sName": "WFLW_40",
+                    "lVertices": [
+                        3577,
+                        3584
+                    ]
+                },
+                {
+                    "sName": "WFLW_41",
+                    "lVertices": [
+                        3588,
+                        3661
+                    ]
+                },
+                {
+                    "sName": "WFLW_42",
+                    "lVertices": [
+                        1006,
+                        1010,
+                        1012
+                    ]
+                },
+                {
+                    "sName": "WFLW_43",
+                    "lVertices": [
+                        1005,
+                        1028
+                    ]
+                },
+                {
+                    "sName": "WFLW_44",
+                    "lVertices": [
+                        1020,
+                        1026,
+                        1400,
+                        1632
+                    ]
+                },
+                {
+                    "sName": "WFLW_45",
+                    "lVertices": [
+                        1392,
+                        1395
+                    ]
+                },
+                {
+                    "sName": "WFLW_46",
+                    "lVertices": [
+                        845,
+                        846,
+                        851
+                    ]
+                },
+                {
+                    "sName": "WFLW_47",
+                    "lVertices": [
+                        1633,
+                        1634
+                    ]
+                },
+                {
+                    "sName": "WFLW_48",
+                    "lVertices": [
+                        1031,
+                        1635
+                    ]
+                },
+                {
+                    "sName": "WFLW_49",
+                    "lVertices": [
+                        972
+                    ]
+                },
+                {
+                    "sName": "WFLW_50",
+                    "lVertices": [
+                        1003,
+                        1007,
+                        2054
+                    ]
+                }
+            ]
+        }
+    ]
+}

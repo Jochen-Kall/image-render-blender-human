@@ -1,0 +1,3902 @@
+{
+  "sSkeletonType": "WFLW",
+  "lBones": [
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_0_V1",
+      "lHead": [
+        -0.07677321881055832,
+        0.0009326395811513066,
+        1.6929221153259277
+      ],
+      "lTail": [
+        -0.07677322626113892,
+        0.010932703502476215,
+        1.6929221153259277
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_0_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_0",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_1_V1",
+      "lHead": [
+        -0.07347901165485382,
+        -0.005142508540302515,
+        1.68085777759552
+      ],
+      "lTail": [
+        -0.07347901910543442,
+        0.0048575554974377155,
+        1.68085777759552
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_1_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_1",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_2_V1",
+      "lHead": [
+        -0.07262826710939407,
+        -0.00530436635017395,
+        1.672332763671875
+      ],
+      "lTail": [
+        -0.07262827455997467,
+        0.00469557847827673,
+        1.672332763671875
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_2_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_2",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_3_V1",
+      "lHead": [
+        -0.07182660698890686,
+        -0.007757170591503382,
+        1.662964105606079
+      ],
+      "lTail": [
+        -0.07182658463716507,
+        0.002242772374302149,
+        1.6629642248153687
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_3_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_3",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_4_V1",
+      "lHead": [
+        -0.07056533545255661,
+        -0.009781247936189175,
+        1.653146743774414
+      ],
+      "lTail": [
+        -0.07056534290313721,
+        0.00021869689226150513,
+        1.653146743774414
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_4_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_4",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_5_V1",
+      "lHead": [
+        -0.06788558512926102,
+        -0.0129772974178195,
+        1.6425442695617676
+      ],
+      "lTail": [
+        -0.06788556277751923,
+        -0.0029772333800792694,
+        1.6425442695617676
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_5_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_5",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_6_V1",
+      "lHead": [
+        -0.06710083037614822,
+        -0.015257694758474827,
+        1.636545181274414
+      ],
+      "lTail": [
+        -0.06710083782672882,
+        -0.005257749930024147,
+        1.636545181274414
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_6_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_6",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_7_V1",
+      "lHead": [
+        -0.06545030325651169,
+        -0.017024576663970947,
+        1.626489520072937
+      ],
+      "lTail": [
+        -0.06545031070709229,
+        -0.007024512626230717,
+        1.626489520072937
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_7_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_7",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_8_V1",
+      "lHead": [
+        -0.06301373243331909,
+        -0.018080569803714752,
+        1.6176791191101074
+      ],
+      "lTail": [
+        -0.06301373988389969,
+        -0.00808038655668497,
+        1.6176791191101074
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_8_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_8",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_9_V1",
+      "lHead": [
+        -0.059767525643110275,
+        -0.02497064135968685,
+        1.6079318523406982
+      ],
+      "lTail": [
+        -0.05976753309369087,
+        -0.014970696531236172,
+        1.6079318523406982
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_9_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_9",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_10_V1",
+      "lHead": [
+        -0.05590631067752838,
+        -0.03308865800499916,
+        1.6018532514572144
+      ],
+      "lTail": [
+        -0.05590628832578659,
+        -0.023088593035936356,
+        1.6018532514572144
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_10_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_10",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_11_V1",
+      "lHead": [
+        -0.05108336731791496,
+        -0.04268922656774521,
+        1.596704125404358
+      ],
+      "lTail": [
+        -0.05108334496617317,
+        -0.032689161598682404,
+        1.596704125404358
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_11_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_11",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_12_V1",
+      "lHead": [
+        -0.04467486962676048,
+        -0.05224765092134476,
+        1.590830683708191
+      ],
+      "lTail": [
+        -0.04467487707734108,
+        -0.0422477088868618,
+        1.5908308029174805
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_12_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_12",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_13_V1",
+      "lHead": [
+        -0.03780907392501831,
+        -0.06074566766619682,
+        1.5854097604751587
+      ],
+      "lTail": [
+        -0.03780908137559891,
+        -0.05074572190642357,
+        1.5854097604751587
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_13_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_13",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_14_V1",
+      "lHead": [
+        -0.02956390753388405,
+        -0.074354387819767,
+        1.5800318717956543
+      ],
+      "lTail": [
+        -0.029563916847109795,
+        -0.0643543228507042,
+        1.5800318717956543
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_14_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_14",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_15_V1",
+      "lHead": [
+        -0.020494164898991585,
+        -0.08739454299211502,
+        1.5753604173660278
+      ],
+      "lTail": [
+        -0.02049417421221733,
+        -0.07739459723234177,
+        1.5753604173660278
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_15_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_15",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_16_V1",
+      "lHead": [
+        0.0005617399583570659,
+        -0.09702233970165253,
+        1.5728881359100342
+      ],
+      "lTail": [
+        0.000561731169000268,
+        -0.08702227473258972,
+        1.5728881359100342
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_16_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_16",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_17_V1",
+      "lHead": [
+        0.020470330491662025,
+        -0.08737839013338089,
+        1.5753871202468872
+      ],
+      "lTail": [
+        0.020470350980758667,
+        -0.07737844437360764,
+        1.5753871202468872
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_17_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_17",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_18_V1",
+      "lHead": [
+        0.02895943820476532,
+        -0.07874951511621475,
+        1.580260157585144
+      ],
+      "lTail": [
+        0.028959428891539574,
+        -0.0687495693564415,
+        1.580260157585144
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_18_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_18",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_19_V1",
+      "lHead": [
+        0.03521732985973358,
+        -0.07033766806125641,
+        1.58469820022583
+      ],
+      "lTail": [
+        0.035217322409152985,
+        -0.060337722301483154,
+        1.5846980810165405
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_19_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_19",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_20_V1",
+      "lHead": [
+        0.041413407772779465,
+        -0.059749212116003036,
+        1.5887902975082397
+      ],
+      "lTail": [
+        0.04141340032219887,
+        -0.04974926635622978,
+        1.5887902975082397
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_20_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_20",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_21_V1",
+      "lHead": [
+        0.04833028465509415,
+        -0.05159060284495354,
+        1.5945594310760498
+      ],
+      "lTail": [
+        0.04833030700683594,
+        -0.04159041866660118,
+        1.5945594310760498
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_21_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_21",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_22_V1",
+      "lHead": [
+        0.05508150905370712,
+        -0.04339609295129776,
+        1.6012983322143555
+      ],
+      "lTail": [
+        0.055081501603126526,
+        -0.033396147191524506,
+        1.6012983322143555
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_22_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_22",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_23_V1",
+      "lHead": [
+        0.0592135414481163,
+        -0.035294000059366226,
+        1.6062242984771729
+      ],
+      "lTail": [
+        0.059213533997535706,
+        -0.02529381588101387,
+        1.6062242984771729
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_23_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_23",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_24_V1",
+      "lHead": [
+        0.062313973903656006,
+        -0.027382483705878258,
+        1.611873745918274
+      ],
+      "lTail": [
+        0.06231396645307541,
+        -0.017382420599460602,
+        1.611873745918274
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_24_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_24",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_25_V1",
+      "lHead": [
+        0.0652172639966011,
+        -0.020736495032906532,
+        1.6214810609817505
+      ],
+      "lTail": [
+        0.0652172863483429,
+        -0.010736430995166302,
+        1.6214810609817505
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_25_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_25",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_26_V1",
+      "lHead": [
+        0.06563197821378708,
+        -0.012969045899808407,
+        1.6319196224212646
+      ],
+      "lTail": [
+        0.06563197076320648,
+        -0.0029689818620681763,
+        1.6319196224212646
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_26_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_26",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_27_V1",
+      "lHead": [
+        0.06808334589004517,
+        -0.01297821756452322,
+        1.6424975395202637
+      ],
+      "lTail": [
+        0.06808333843946457,
+        -0.0029782727360725403,
+        1.6424975395202637
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_27_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_27",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_28_V1",
+      "lHead": [
+        0.07063595205545425,
+        -0.009814746677875519,
+        1.6531411409378052
+      ],
+      "lTail": [
+        0.07063594460487366,
+        0.00018519815057516098,
+        1.6531411409378052
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_28_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_28",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_29_V1",
+      "lHead": [
+        0.07184034585952759,
+        -0.007762106601148844,
+        1.6629797220230103
+      ],
+      "lTail": [
+        0.07184036821126938,
+        0.002237838227301836,
+        1.6629797220230103
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_29_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_29",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_30_V1",
+      "lHead": [
+        0.07263004034757614,
+        -0.005310632288455963,
+        1.6723417043685913
+      ],
+      "lTail": [
+        0.07263006269931793,
+        0.004689312539994717,
+        1.6723417043685913
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_30_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_30",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_31_V1",
+      "lHead": [
+        0.07348073273897171,
+        -0.005154753103852272,
+        1.6808611154556274
+      ],
+      "lTail": [
+        0.07348072528839111,
+        0.0048453109338879585,
+        1.6808611154556274
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_31_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_31",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_32_V1",
+      "lHead": [
+        0.07817157357931137,
+        0.0025699399411678314,
+        1.6927412748336792
+      ],
+      "lTail": [
+        0.07817156612873077,
+        0.012570003978908062,
+        1.6927412748336792
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_32_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_32",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_51_V1",
+      "lHead": [
+        3.625009867391782e-06,
+        -0.09965932369232178,
+        1.697041392326355
+      ],
+      "lTail": [
+        3.616223011704278e-06,
+        -0.08965913951396942,
+        1.697041392326355
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_51_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_51",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_52_V1",
+      "lHead": [
+        -0.00021499999274965376,
+        -0.1077517494559288,
+        1.6771295070648193
+      ],
+      "lTail": [
+        -0.00021500879665836692,
+        -0.097751684486866,
+        1.6771295070648193
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_52_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_52",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_53_V1",
+      "lHead": [
+        -0.00043145500239916146,
+        -0.1146303340792656,
+        1.6671842336654663
+      ],
+      "lTail": [
+        -0.00043143401853740215,
+        -0.10463026911020279,
+        1.6671842336654663
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_53_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_53",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_54_V1",
+      "lHead": [
+        -0.0006631049327552319,
+        -0.12289779633283615,
+        1.6560146808624268
+      ],
+      "lTail": [
+        -0.0006631137803196907,
+        -0.1128978505730629,
+        1.6560146808624268
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_54_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_54",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_55_V1",
+      "lHead": [
+        -0.017253432422876358,
+        -0.10207585990428925,
+        1.6457446813583374
+      ],
+      "lTail": [
+        -0.017253441736102104,
+        -0.09207591414451599,
+        1.6457446813583374
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_55_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_55",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_56_V1",
+      "lHead": [
+        -0.011859612539410591,
+        -0.10399351269006729,
+        1.6462323665618896
+      ],
+      "lTail": [
+        -0.011859620921313763,
+        -0.09399356693029404,
+        1.6462323665618896
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_56_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_56",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_57_V1",
+      "lHead": [
+        1.0000101156038e-06,
+        -0.10984893143177032,
+        1.6436399221420288
+      ],
+      "lTail": [
+        1.020978402266337e-06,
+        -0.09984898567199707,
+        1.6436399221420288
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_57_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_57",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_58_V1",
+      "lHead": [
+        0.01185532845556736,
+        -0.10399547964334488,
+        1.6462421417236328
+      ],
+      "lTail": [
+        0.011855320073664188,
+        -0.09399541467428207,
+        1.6462421417236328
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_58_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_58",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_59_V1",
+      "lHead": [
+        0.01858510822057724,
+        -0.10338124632835388,
+        1.6469742059707642
+      ],
+      "lTail": [
+        0.018585098907351494,
+        -0.09338130056858063,
+        1.6469742059707642
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_59_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_59",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_60_V1",
+      "lHead": [
+        -0.046030715107917786,
+        -0.07798735052347183,
+        1.6898356676101685
+      ],
+      "lTail": [
+        -0.04603072255849838,
+        -0.06798728555440903,
+        1.6898356676101685
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_60_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_60",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_61_V1",
+      "lHead": [
+        -0.04300560802221298,
+        -0.08531631529331207,
+        1.694135069847107
+      ],
+      "lTail": [
+        -0.04300561547279358,
+        -0.07531636953353882,
+        1.694135069847107
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_61_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_61",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_62_V1",
+      "lHead": [
+        -0.03298288956284523,
+        -0.08970535546541214,
+        1.6955556869506836
+      ],
+      "lTail": [
+        -0.03298289701342583,
+        -0.07970540970563889,
+        1.6955556869506836
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_62_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_62",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_63_V1",
+      "lHead": [
+        -0.026586264371871948,
+        -0.08744402974843979,
+        1.692337989807129
+      ],
+      "lTail": [
+        -0.026586273685097694,
+        -0.07744396477937698,
+        1.692337989807129
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_63_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_63",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_64_V1",
+      "lHead": [
+        -0.018208971247076988,
+        -0.08423501998186111,
+        1.686492919921875
+      ],
+      "lTail": [
+        -0.018208980560302734,
+        -0.07423483580350876,
+        1.686492919921875
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_64_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_64",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_65_V1",
+      "lHead": [
+        -0.026872655376791954,
+        -0.08737481385469437,
+        1.6846332550048828
+      ],
+      "lTail": [
+        -0.0268726646900177,
+        -0.07737486809492111,
+        1.6846332550048828
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_65_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_65",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_66_V1",
+      "lHead": [
+        -0.034344930201768875,
+        -0.08830602467060089,
+        1.6843706369400024
+      ],
+      "lTail": [
+        -0.03434493765234947,
+        -0.07830595970153809,
+        1.6843706369400024
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_66_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_66",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_67_V1",
+      "lHead": [
+        -0.04377329722046852,
+        -0.0835816040635109,
+        1.685657262802124
+      ],
+      "lTail": [
+        -0.04377330467104912,
+        -0.07358165830373764,
+        1.685657262802124
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_67_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_67",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_68_V1",
+      "lHead": [
+        0.018239177763462067,
+        -0.08425352722406387,
+        1.6865466833114624
+      ],
+      "lTail": [
+        0.01823916845023632,
+        -0.07425358146429062,
+        1.6865466833114624
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_68_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_68",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_69_V1",
+      "lHead": [
+        0.02584773115813732,
+        -0.08824048191308975,
+        1.692948341369629
+      ],
+      "lTail": [
+        0.025847751647233963,
+        -0.07824041694402695,
+        1.692948341369629
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_69_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_69",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_70_V1",
+      "lHead": [
+        0.03301124647259712,
+        -0.08970341831445694,
+        1.6955808401107788
+      ],
+      "lTail": [
+        0.033011239022016525,
+        -0.07970347255468369,
+        1.6955808401107788
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_70_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_70",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_71_V1",
+      "lHead": [
+        0.043014831840991974,
+        -0.08531196415424347,
+        1.6941264867782593
+      ],
+      "lTail": [
+        0.04301482439041138,
+        -0.07531201839447021,
+        1.6941264867782593
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_71_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_71",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_72_V1",
+      "lHead": [
+        0.04605945199728012,
+        -0.07811364531517029,
+        1.6900615692138672
+      ],
+      "lTail": [
+        0.04605947434902191,
+        -0.06811358034610748,
+        1.6900615692138672
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_72_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_72",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_73_V1",
+      "lHead": [
+        0.04374731704592705,
+        -0.08271773904561996,
+        1.6865335702896118
+      ],
+      "lTail": [
+        0.04374733939766884,
+        -0.07271755486726761,
+        1.6865335702896118
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_73_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_73",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_74_V1",
+      "lHead": [
+        0.03673165664076805,
+        -0.08788971602916718,
+        1.684482216835022
+      ],
+      "lTail": [
+        0.03673167899250984,
+        -0.07788965106010437,
+        1.684482216835022
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_74_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_74",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_75_V1",
+      "lHead": [
+        0.027110762894153595,
+        -0.0867898240685463,
+        1.6852788925170898
+      ],
+      "lTail": [
+        0.027110783383250237,
+        -0.07678987830877304,
+        1.6852788925170898
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_75_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_75",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_76_V1",
+      "lHead": [
+        -0.028031520545482635,
+        -0.097615085542202,
+        1.6188546419143677
+      ],
+      "lTail": [
+        -0.02803152985870838,
+        -0.08761513978242874,
+        1.6188546419143677
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_76_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_76",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_77_V1",
+      "lHead": [
+        -0.01810690015554428,
+        -0.10925626009702682,
+        1.6273311376571655
+      ],
+      "lTail": [
+        -0.018106909468770027,
+        -0.09925631433725357,
+        1.6273311376571655
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_77_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_77",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_78_V1",
+      "lHead": [
+        -0.006090989802032709,
+        -0.11522835493087769,
+        1.6324169635772705
+      ],
+      "lTail": [
+        -0.00609096884727478,
+        -0.10522828996181488,
+        1.63241708278656
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_78_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_78",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_79_V1",
+      "lHead": [
+        -0.00027769498410634696,
+        -0.11654194444417953,
+        1.6304292678833008
+      ],
+      "lTail": [
+        -0.0002777038316708058,
+        -0.10654199868440628,
+        1.6304292678833008
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_79_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_79",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_80_V1",
+      "lHead": [
+        0.006054658908396959,
+        -0.11518306285142899,
+        1.6324036121368408
+      ],
+      "lTail": [
+        0.0060546500608325005,
+        -0.10518299788236618,
+        1.6324036121368408
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_80_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_80",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_81_V1",
+      "lHead": [
+        0.018107552081346512,
+        -0.10925693809986115,
+        1.6273342370986938
+      ],
+      "lTail": [
+        0.018107572570443153,
+        -0.09925699234008789,
+        1.6273342370986938
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_81_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_81",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_82_V1",
+      "lHead": [
+        0.02803686447441578,
+        -0.0976087749004364,
+        1.6188722848892212
+      ],
+      "lTail": [
+        0.02803688496351242,
+        -0.08760882914066315,
+        1.6188722848892212
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_82_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_82",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_83_V1",
+      "lHead": [
+        0.01868177391588688,
+        -0.10550094395875931,
+        1.6105918884277344
+      ],
+      "lTail": [
+        0.018681764602661133,
+        -0.0955008789896965,
+        1.6105918884277344
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_83_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_83",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_84_V1",
+      "lHead": [
+        0.009665039367973804,
+        -0.11115077883005142,
+        1.6075273752212524
+      ],
+      "lTail": [
+        0.00966506078839302,
+        -0.10115071386098862,
+        1.6075273752212524
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_84_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_84",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_85_V1",
+      "lHead": [
+        0.0005100800190120935,
+        -0.11295437067747116,
+        1.6067593097686768
+      ],
+      "lTail": [
+        0.0005100711714476347,
+        -0.1029544249176979,
+        1.6067593097686768
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_85_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_85",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_86_V1",
+      "lHead": [
+        -0.009660186246037483,
+        -0.11116789281368256,
+        1.6075249910354614
+      ],
+      "lTail": [
+        -0.009660194627940655,
+        -0.1011679470539093,
+        1.6075249910354614
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_86_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_86",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_87_V1",
+      "lHead": [
+        -0.01867413893342018,
+        -0.105497345328331,
+        1.6105852127075195
+      ],
+      "lTail": [
+        -0.018674148246645927,
+        -0.09549728035926819,
+        1.6105852127075195
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_87_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_87",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_88_V1",
+      "lHead": [
+        -0.02406230755150318,
+        -0.0983230248093605,
+        1.6186964511871338
+      ],
+      "lTail": [
+        -0.024062316864728928,
+        -0.08832307904958725,
+        1.6186964511871338
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_88_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_88",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_89_V1",
+      "lHead": [
+        -0.010104055516421795,
+        -0.11180977523326874,
+        1.6218990087509155
+      ],
+      "lTail": [
+        -0.010104034096002579,
+        -0.10180982947349548,
+        1.6218990087509155
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_89_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_89",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_90_V1",
+      "lHead": [
+        6.900092444084294e-07,
+        -0.11343660950660706,
+        1.621004581451416
+      ],
+      "lTail": [
+        6.811752655266901e-07,
+        -0.1034366637468338,
+        1.621004581451416
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_90_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_90",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_91_V1",
+      "lHead": [
+        0.011931788176298141,
+        -0.11077293753623962,
+        1.621630072593689
+      ],
+      "lTail": [
+        0.011931809596717358,
+        -0.10077287256717682,
+        1.621630072593689
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_91_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_91",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_92_V1",
+      "lHead": [
+        0.026046961545944214,
+        -0.09663523733615875,
+        1.6184453964233398
+      ],
+      "lTail": [
+        0.026046982035040855,
+        -0.08663517236709595,
+        1.6184453964233398
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_92_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_92",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_93_V1",
+      "lHead": [
+        0.011948470026254654,
+        -0.11011125892400742,
+        1.6179982423782349
+      ],
+      "lTail": [
+        0.011948461644351482,
+        -0.10011131316423416,
+        1.6179982423782349
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_93_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_93",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_94_V1",
+      "lHead": [
+        0.0002753453445620835,
+        -0.11139567941427231,
+        1.617372751235962
+      ],
+      "lTail": [
+        0.00027533649699762464,
+        -0.10139573365449905,
+        1.617372751235962
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_94_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_94",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_95_V1",
+      "lHead": [
+        -0.010102040134370327,
+        -0.1110592931509018,
+        1.6178524494171143
+      ],
+      "lTail": [
+        -0.010102048516273499,
+        -0.10105922818183899,
+        1.6178524494171143
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_95_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_95",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_50_V1",
+      "lHead": [
+        0.017737507820129395,
+        -0.09569668769836426,
+        1.705001711845398
+      ],
+      "lTail": [
+        0.01773749850690365,
+        -0.08569662272930145,
+        1.705001711845398
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_50_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_50",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_49_V1",
+      "lHead": [
+        0.027471672743558884,
+        -0.09259344637393951,
+        1.7068357467651367
+      ],
+      "lTail": [
+        0.027471663430333138,
+        -0.08259350061416626,
+        1.7068357467651367
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_49_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_49",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_48_V1",
+      "lHead": [
+        0.03734049201011658,
+        -0.0897025540471077,
+        1.7081555128097534
+      ],
+      "lTail": [
+        0.03734048455953598,
+        -0.07970260828733444,
+        1.7081555128097534
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_48_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_48",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_47_V1",
+      "lHead": [
+        0.046897049993276596,
+        -0.08467640727758408,
+        1.707533359527588
+      ],
+      "lTail": [
+        0.046897042542696,
+        -0.07467634230852127,
+        1.707533359527588
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_47_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_47",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_46_V1",
+      "lHead": [
+        0.056759171187877655,
+        -0.07340717315673828,
+        1.702964186668396
+      ],
+      "lTail": [
+        0.056759193539619446,
+        -0.06340722739696503,
+        1.702964186668396
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.2499999850988388,
+      "fHeadRadius": 0.10000000894069672,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_46_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_46",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_45_V1",
+      "lHead": [
+        0.051376134157180786,
+        -0.07911147177219391,
+        1.715001106262207
+      ],
+      "lTail": [
+        0.05137612670660019,
+        -0.06911152601242065,
+        1.715001106262207
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_45_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_45",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_44_V1",
+      "lHead": [
+        0.04227946326136589,
+        -0.08789278566837311,
+        1.7161513566970825
+      ],
+      "lTail": [
+        0.042279455810785294,
+        -0.0778927206993103,
+        1.7161513566970825
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_44_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_44",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_43_V1",
+      "lHead": [
+        0.031798310577869415,
+        -0.09364529699087143,
+        1.71574866771698
+      ],
+      "lTail": [
+        0.03179830312728882,
+        -0.08364523202180862,
+        1.71574866771698
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_43_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_43",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_42_V1",
+      "lHead": [
+        0.01969064399600029,
+        -0.09770065546035767,
+        1.7132117748260498
+      ],
+      "lTail": [
+        0.019690634682774544,
+        -0.08770070970058441,
+        1.7132117748260498
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_42_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_42",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_33_V1",
+      "lHead": [
+        -0.056680828332901,
+        -0.0719079077243805,
+        1.6981438398361206
+      ],
+      "lTail": [
+        -0.05668080598115921,
+        -0.06190796196460724,
+        1.6981438398361206
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_33_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_33",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_34_V1",
+      "lHead": [
+        -0.05147290974855423,
+        -0.08049517124891281,
+        1.7104747295379639
+      ],
+      "lTail": [
+        -0.05147291719913483,
+        -0.07049522548913956,
+        1.7104747295379639
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_34_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_34",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_35_V1",
+      "lHead": [
+        -0.042425647377967834,
+        -0.08789405226707458,
+        1.7117159366607666
+      ],
+      "lTail": [
+        -0.042425625026226044,
+        -0.07789410650730133,
+        1.7117159366607666
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_35_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_35",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_36_V1",
+      "lHead": [
+        -0.032029181718826294,
+        -0.09243844449520111,
+        1.7111777067184448
+      ],
+      "lTail": [
+        -0.0320291593670845,
+        -0.0824383795261383,
+        1.7111777067184448
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_36_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_36",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_37_V1",
+      "lHead": [
+        -0.017735851928591728,
+        -0.09569625556468964,
+        1.7050219774246216
+      ],
+      "lTail": [
+        -0.017735861241817474,
+        -0.08569619059562683,
+        1.7050219774246216
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_37_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_37",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_38_V1",
+      "lHead": [
+        -0.01536129042506218,
+        -0.09257493913173676,
+        1.700465440750122
+      ],
+      "lTail": [
+        -0.015361298806965351,
+        -0.08257487416267395,
+        1.700465440750122
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_38_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_38",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_39_V1",
+      "lHead": [
+        -0.02778506837785244,
+        -0.0911562442779541,
+        1.7045457363128662
+      ],
+      "lTail": [
+        -0.027785077691078186,
+        -0.08115629851818085,
+        1.7045457363128662
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_39_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_39",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_40_V1",
+      "lHead": [
+        -0.03739041090011597,
+        -0.08916032314300537,
+        1.7055705785751343
+      ],
+      "lTail": [
+        -0.037390418350696564,
+        -0.07916025817394257,
+        1.7055705785751343
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_40_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_40",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_41_V1",
+      "lHead": [
+        -0.05002793297171593,
+        -0.08154285699129105,
+        1.7035949230194092
+      ],
+      "lTail": [
+        -0.050027940422296524,
+        -0.07154291123151779,
+        1.7035949230194092
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_41_V1",
+          "sTarget": "HG_Body.001",
+          "sSubtarget": "WFLW_41",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_97_V1",
+      "lHead": [
+        0.03416145592927933,
+        -0.08788225054740906,
+        1.6911301612854004
+      ],
+      "lTail": [
+        0.03416144847869873,
+        -0.07788218557834625,
+        1.6911301612854004
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_97_V1",
+          "sTarget": "HG_Eyes.001",
+          "sSubtarget": "WFLW_97",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    },
+    {
+      "sType": "WFLW",
+      "sName": "WFLW_96_V1",
+      "lHead": [
+        -0.03416147828102112,
+        -0.08788222819566727,
+        1.6911300420761108
+      ],
+      "lTail": [
+        -0.034161485731601715,
+        -0.07788216322660446,
+        1.6911300420761108
+      ],
+      "sParent": "head",
+      "fEnvelope": 0.25,
+      "fHeadRadius": 0.10000000149011612,
+      "lConstraints": [
+        {
+          "sType": "COPY_LOCATION",
+          "sBone": "AT.Label;WFLW;WFLW_96_V1",
+          "sTarget": "HG_Eyes.001",
+          "sSubtarget": "WFLW_96",
+          "bUseX": true,
+          "bUseY": true,
+          "bUseZ": true,
+          "bInvertX": false,
+          "bInvertY": false,
+          "bInvertZ": false,
+          "sTargetSpace": "WORLD",
+          "sOwnerSpace": "WORLD",
+          "fInfluence": 1.0
+        }
+      ]
+    }
+  ],
+  "lLabelVertices": [
+    {
+      "sObject": "HG_Body.001",
+      "lLabels": [
+        {
+          "sName": "WFLW_0",
+          "lVertices": [
+            5568
+          ]
+        },
+        {
+          "sName": "WFLW_1",
+          "lVertices": [
+            5833
+          ]
+        },
+        {
+          "sName": "WFLW_2",
+          "lVertices": [
+            5801
+          ]
+        },
+        {
+          "sName": "WFLW_3",
+          "lVertices": [
+            5795
+          ]
+        },
+        {
+          "sName": "WFLW_4",
+          "lVertices": [
+            5746
+          ]
+        },
+        {
+          "sName": "WFLW_5",
+          "lVertices": [
+            5759
+          ]
+        },
+        {
+          "sName": "WFLW_6",
+          "lVertices": [
+            5760
+          ]
+        },
+        {
+          "sName": "WFLW_7",
+          "lVertices": [
+            5098
+          ]
+        },
+        {
+          "sName": "WFLW_8",
+          "lVertices": [
+            5090
+          ]
+        },
+        {
+          "sName": "WFLW_9",
+          "lVertices": [
+            4953
+          ]
+        },
+        {
+          "sName": "WFLW_10",
+          "lVertices": [
+            4960
+          ]
+        },
+        {
+          "sName": "WFLW_11",
+          "lVertices": [
+            4965
+          ]
+        },
+        {
+          "sName": "WFLW_12",
+          "lVertices": [
+            4994
+          ]
+        },
+        {
+          "sName": "WFLW_13",
+          "lVertices": [
+            4996
+          ]
+        },
+        {
+          "sName": "WFLW_14",
+          "lVertices": [
+            7802
+          ]
+        },
+        {
+          "sName": "WFLW_15",
+          "lVertices": [
+            7793
+          ]
+        },
+        {
+          "sName": "WFLW_16",
+          "lVertices": [
+            7676
+          ]
+        },
+        {
+          "sName": "WFLW_17",
+          "lVertices": [
+            7762
+          ]
+        },
+        {
+          "sName": "WFLW_18",
+          "lVertices": [
+            7772
+          ]
+        },
+        {
+          "sName": "WFLW_19",
+          "lVertices": [
+            7776,
+            7781
+          ]
+        },
+        {
+          "sName": "WFLW_20",
+          "lVertices": [
+            7513
+          ]
+        },
+        {
+          "sName": "WFLW_21",
+          "lVertices": [
+            2746
+          ]
+        },
+        {
+          "sName": "WFLW_22",
+          "lVertices": [
+            2704
+          ]
+        },
+        {
+          "sName": "WFLW_23",
+          "lVertices": [
+            2681
+          ]
+        },
+        {
+          "sName": "WFLW_24",
+          "lVertices": [
+            2674
+          ]
+        },
+        {
+          "sName": "WFLW_25",
+          "lVertices": [
+            2645
+          ]
+        },
+        {
+          "sName": "WFLW_26",
+          "lVertices": [
+            2543
+          ]
+        },
+        {
+          "sName": "WFLW_27",
+          "lVertices": [
+            2608
+          ]
+        },
+        {
+          "sName": "WFLW_28",
+          "lVertices": [
+            2636
+          ]
+        },
+        {
+          "sName": "WFLW_29",
+          "lVertices": [
+            3341
+          ]
+        },
+        {
+          "sName": "WFLW_30",
+          "lVertices": [
+            3338
+          ]
+        },
+        {
+          "sName": "WFLW_31",
+          "lVertices": [
+            2921
+          ]
+        },
+        {
+          "sName": "WFLW_32",
+          "lVertices": [
+            2882
+          ]
+        },
+        {
+          "sName": "WFLW_51",
+          "lVertices": [
+            1917
+          ]
+        },
+        {
+          "sName": "WFLW_52",
+          "lVertices": [
+            1901
+          ]
+        },
+        {
+          "sName": "WFLW_53",
+          "lVertices": [
+            1959
+          ]
+        },
+        {
+          "sName": "WFLW_54",
+          "lVertices": [
+            2012
+          ]
+        },
+        {
+          "sName": "WFLW_55",
+          "lVertices": [
+            4683
+          ]
+        },
+        {
+          "sName": "WFLW_56",
+          "lVertices": [
+            2297
+          ]
+        },
+        {
+          "sName": "WFLW_57",
+          "lVertices": [
+            2223
+          ]
+        },
+        {
+          "sName": "WFLW_58",
+          "lVertices": [
+            2309
+          ]
+        },
+        {
+          "sName": "WFLW_59",
+          "lVertices": [
+            2063
+          ]
+        },
+        {
+          "sName": "WFLW_60",
+          "lVertices": [
+            3901
+          ]
+        },
+        {
+          "sName": "WFLW_61",
+          "lVertices": [
+            3885
+          ]
+        },
+        {
+          "sName": "WFLW_62",
+          "lVertices": [
+            3872
+          ]
+        },
+        {
+          "sName": "WFLW_63",
+          "lVertices": [
+            4132
+          ]
+        },
+        {
+          "sName": "WFLW_64",
+          "lVertices": [
+            3535
+          ]
+        },
+        {
+          "sName": "WFLW_65",
+          "lVertices": [
+            3864
+          ]
+        },
+        {
+          "sName": "WFLW_66",
+          "lVertices": [
+            4369
+          ]
+        },
+        {
+          "sName": "WFLW_67",
+          "lVertices": [
+            4361
+          ]
+        },
+        {
+          "sName": "WFLW_68",
+          "lVertices": [
+            1089
+          ]
+        },
+        {
+          "sName": "WFLW_69",
+          "lVertices": [
+            764
+          ]
+        },
+        {
+          "sName": "WFLW_70",
+          "lVertices": [
+            770
+          ]
+        },
+        {
+          "sName": "WFLW_71",
+          "lVertices": [
+            781
+          ]
+        },
+        {
+          "sName": "WFLW_72",
+          "lVertices": [
+            909
+          ]
+        },
+        {
+          "sName": "WFLW_73",
+          "lVertices": [
+            7215
+          ]
+        },
+        {
+          "sName": "WFLW_74",
+          "lVertices": [
+            7203
+          ]
+        },
+        {
+          "sName": "WFLW_75",
+          "lVertices": [
+            1357
+          ]
+        },
+        {
+          "sName": "WFLW_76",
+          "lVertices": [
+            4826
+          ]
+        },
+        {
+          "sName": "WFLW_77",
+          "lVertices": [
+            4754
+          ]
+        },
+        {
+          "sName": "WFLW_78",
+          "lVertices": [
+            4725
+          ]
+        },
+        {
+          "sName": "WFLW_79",
+          "lVertices": [
+            2181
+          ]
+        },
+        {
+          "sName": "WFLW_80",
+          "lVertices": [
+            2086
+          ]
+        },
+        {
+          "sName": "WFLW_81",
+          "lVertices": [
+            2109
+          ]
+        },
+        {
+          "sName": "WFLW_82",
+          "lVertices": [
+            7469
+          ]
+        },
+        {
+          "sName": "WFLW_83",
+          "lVertices": [
+            9697
+          ]
+        },
+        {
+          "sName": "WFLW_84",
+          "lVertices": [
+            9793
+          ]
+        },
+        {
+          "sName": "WFLW_85",
+          "lVertices": [
+            9799
+          ]
+        },
+        {
+          "sName": "WFLW_86",
+          "lVertices": [
+            8960
+          ]
+        },
+        {
+          "sName": "WFLW_87",
+          "lVertices": [
+            8944
+          ]
+        },
+        {
+          "sName": "WFLW_88",
+          "lVertices": [
+            4839
+          ]
+        },
+        {
+          "sName": "WFLW_89",
+          "lVertices": [
+            4782
+          ]
+        },
+        {
+          "sName": "WFLW_90",
+          "lVertices": [
+            2178
+          ]
+        },
+        {
+          "sName": "WFLW_91",
+          "lVertices": [
+            2158
+          ]
+        },
+        {
+          "sName": "WFLW_92",
+          "lVertices": [
+            9721
+          ]
+        },
+        {
+          "sName": "WFLW_93",
+          "lVertices": [
+            9862
+          ]
+        },
+        {
+          "sName": "WFLW_94",
+          "lVertices": [
+            9845
+          ]
+        },
+        {
+          "sName": "WFLW_95",
+          "lVertices": [
+            9828
+          ]
+        }
+      ]
+    },
+    {
+      "sObject": "HG_Eyes.001",
+      "lLabels": [
+        {
+          "sName": "WFLW_97",
+          "lVertices": [
+            2668
+          ]
+        },
+        {
+          "sName": "WFLW_96",
+          "lVertices": [
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "sObject": "HG_Body",
+      "lLabels": [
+        {
+          "sName": "WFLW_33",
+          "lVertices": [
+            3635,
+            3653,
+            3655
+          ]
+        },
+        {
+          "sName": "WFLW_34",
+          "lVertices": [
+            3624,
+            3627
+          ]
+        },
+        {
+          "sName": "WFLW_35",
+          "lVertices": [
+            3576,
+            3583,
+            3586,
+            3663
+          ]
+        },
+        {
+          "sName": "WFLW_36",
+          "lVertices": [
+            3578,
+            3581
+          ]
+        },
+        {
+          "sName": "WFLW_37",
+          "lVertices": [
+            3687,
+            3732,
+            3735
+          ]
+        },
+        {
+          "sName": "WFLW_38",
+          "lVertices": [
+            3683,
+            3686,
+            3690
+          ]
+        },
+        {
+          "sName": "WFLW_39",
+          "lVertices": [
+            3572
+          ]
+        },
+        {
+          "sName": "WFLW_40",
+          "lVertices": [
+            3577,
+            3584
+          ]
+        },
+        {
+          "sName": "WFLW_41",
+          "lVertices": [
+            3588,
+            3661
+          ]
+        }
+      ]
+    }
+  ]
+}
