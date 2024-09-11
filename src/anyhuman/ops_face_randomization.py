@@ -87,7 +87,7 @@ face_bone_correlation = [
 
 # determines the variance in the face expressions (larger = more extreme faces, 0 = always the same face)
 # too large values result in unnatural "Fratzen" whereas small values produce average face with little variability
-face_expression_sigma = 0.4
+# face_expression_sigma = 0.4
 
 # for the random head rotation
 head_rot_limits = [math.pi * 0.25, math.pi * 0.4, math.pi * 0.17]
@@ -603,6 +603,7 @@ def RandomFaceExpression(
     object,
     mLimits,
     lCorrelation=[],
+    face_expression_sigma=0.4,
     **kwargs,
 ):
     """Create a random face expression given its HumGen Bone limits and the sparse bone correlation list.
@@ -624,100 +625,81 @@ def RandomFaceExpression(
     numParams = shape[0]
 
     # The new version including the correlation of bones
-    if True:
-        # build covariance matrix from correlations and limits (= variances)
-        boneCov = np.zeros(shape=(numParams, numParams, 3), dtype=np.float32)
-        # the zero pose of the bones is the default rest pose, hence the mean should be all zero
-        boneMean = np.zeros(shape=(numParams, 3), dtype=np.float32)
-        scaleLow = np.zeros(shape=(numParams, 3), dtype=np.float32)
-        scaleUp = np.zeros(shape=(numParams, 3), dtype=np.float32)
-        idx2bone = {}
-        bone2idx = {}
-        for i, (key, limits) in enumerate(mLimits.items()):
-            idx2bone[i] = key
-            bone2idx[key] = i
-            if key in object.pose.bones:
-                b = object.pose.bones[key]
-                # delta = limits[1] - limits[0]
-                l0 = np.float32(limits[0])
-                l1 = np.float32(limits[1])
-                assert np.all(l1 >= 0) and np.all(l0 <= 0)
 
-                # sigma = np.maximum(l1 - 0, 0 - l0) * face_expression_sigma
-                sigma = 1.0  # face_expression_sigma
-                scaleLow[i] = 0 - l0  # lower side (negative) scaling
-                scaleUp[i] = l1 - 0  # upper side (positive) scaling
-                boneCov[i, i] = sigma
-            else:
-                boneCov[i, i] = np.float32([0.0001, 0.0001, 0.0001])
+    # build covariance matrix from correlations and limits (= variances)
+    boneCov = np.zeros(shape=(numParams, numParams, 3), dtype=np.float32)
+    # the zero pose of the bones is the default rest pose, hence the mean should be all zero
+    boneMean = np.zeros(shape=(numParams, 3), dtype=np.float32)
+    scaleLow = np.zeros(shape=(numParams, 3), dtype=np.float32)
+    scaleUp = np.zeros(shape=(numParams, 3), dtype=np.float32)
+    idx2bone = {}
+    bone2idx = {}
+    for i, (key, limits) in enumerate(mLimits.items()):
+        idx2bone[i] = key
+        bone2idx[key] = i
+        if key in object.pose.bones:
+            b = object.pose.bones[key]
+            # delta = limits[1] - limits[0]
+            l0 = np.float32(limits[0])
+            l1 = np.float32(limits[1])
+            assert np.all(l1 >= 0) and np.all(l0 <= 0)
 
-        for key0, key1, corr in lCorrelation:
-            if key0 in bone2idx and key1 in bone2idx:
-                i0 = bone2idx[key0]
-                i1 = bone2idx[key1]
-                assert i0 != i1
-                # cov(x,y) = corr(x,y) * var(x) * var(y)
-                # cov = corr * boneCov[i0,i0] * boneCov[i1,i1]
-                cov = corr  # sigmas are one, hence don't need to scale
-                boneCov[i0, i1] = cov
-                boneCov[i1, i0] = cov  # must be symmetric
-            else:
-                print(f"Warning: key {key0} or key {key1} not found in the face bones!")
+            # sigma = np.maximum(l1 - 0, 0 - l0) * face_expression_sigma
+            sigma = 1.0  # face_expression_sigma
+            scaleLow[i] = 0 - l0  # lower side (negative) scaling
+            scaleUp[i] = l1 - 0  # upper side (positive) scaling
+            boneCov[i, i] = sigma
+        else:
+            boneCov[i, i] = np.float32([0.0001, 0.0001, 0.0001])
 
-        # cov = diagonal_standard_deviation_matrix * correlation_matrix * diagonal_standard_deviation_matrix
-        boneCov *= (
-            face_expression_sigma * face_expression_sigma
-        )  # scale the covariance globally by the face expression variance
+    for key0, key1, corr in lCorrelation:
+        if key0 in bone2idx and key1 in bone2idx:
+            i0 = bone2idx[key0]
+            i1 = bone2idx[key1]
+            assert i0 != i1
+            # cov(x,y) = corr(x,y) * var(x) * var(y)
+            # cov = corr * boneCov[i0,i0] * boneCov[i1,i1]
+            cov = corr  # sigmas are one, hence don't need to scale
+            boneCov[i0, i1] = cov
+            boneCov[i1, i0] = cov  # must be symmetric
+        else:
+            print(f"Warning: key {key0} or key {key1} not found in the face bones!")
 
-        sample3D = []
-        # sample each of the 3 dimensions independently (no correlation between the axis assumed)
-        for dim in range(3):
-            boneCovMatrix = boneCov[:, :, dim]  # np.reshape(boneCov, (numParams*3,numParams*3))
-            xi = np.random.multivariate_normal(mean=boneMean[:, dim], cov=boneCovMatrix, size=1)
-            # print(xi)
-            sample3D.append(np.squeeze(xi))
-        sample3D = np.stack(sample3D, axis=-1)
+    # cov = diagonal_standard_deviation_matrix * correlation_matrix * diagonal_standard_deviation_matrix
+    boneCov *= (
+        face_expression_sigma * face_expression_sigma
+    )  # scale the covariance globally by the face expression variance
 
-        # for (key0,key1,corr) in lCorrelation:
-        #     if key0 in bone2idx and key1 in bone2idx:
-        #         i0 = bone2idx[key0]
-        #         i1 = bone2idx[key1]
-        #         print(f"Sample for key {key0} = {sample3D[i0]}, key {key1} = {sample3D[i1]}")
+    sample3D = []
+    # sample each of the 3 dimensions independently (no correlation between the axis assumed)
+    for dim in range(3):
+        boneCovMatrix = boneCov[:, :, dim]  # np.reshape(boneCov, (numParams*3,numParams*3))
+        xi = np.random.multivariate_normal(mean=boneMean[:, dim], cov=boneCovMatrix, size=1)
+        # print(xi)
+        sample3D.append(np.squeeze(xi))
+    sample3D = np.stack(sample3D, axis=-1)
 
-        # since the normal distribution is symmetric but we need an assymetric distribution
-        # depending on the lower and upper bounds of the face bone positions
-        # we scale the standard deviation of negative and positive side individually
-        mask0 = sample3D < 0
-        mask1 = sample3D >= 0
+    # for (key0,key1,corr) in lCorrelation:
+    #     if key0 in bone2idx and key1 in bone2idx:
+    #         i0 = bone2idx[key0]
+    #         i1 = bone2idx[key1]
+    #         print(f"Sample for key {key0} = {sample3D[i0]}, key {key1} = {sample3D[i1]}")
 
-        # d[mask0] = scaleLow[mask0] * np.abs(sample3D[mask0])
-        # d[mask1] = scaleUp[mask1]  * np.abs(sample3D[mask1])
-        sample3D[mask0] = scaleLow[mask0] * sample3D[mask0]
-        sample3D[mask1] = scaleUp[mask1] * sample3D[mask1]
-        for key, limits in mLimits.items():
-            if key in object.pose.bones:
-                b = object.pose.bones[key]
-                idx = bone2idx[key]
-                b.location = Vector(sample3D[idx])
+    # since the normal distribution is symmetric but we need an assymetric distribution
+    # depending on the lower and upper bounds of the face bone positions
+    # we scale the standard deviation of negative and positive side individually
+    mask0 = sample3D < 0
+    mask1 = sample3D >= 0
 
-    else:  # this is the old code that does not take into account the correlation of face bones
-        for key, limits in mLimits.items():
-            if key in object.pose.bones:
-                b = object.pose.bones[key]
-                delta = limits[1] - limits[0]
-                # r = np.random.uniform(0, 1, size=(3,)).astype(np.float32)
-                # b.location = Vector(limits[0]) + delta * Vector(r)
-                r = face_expression_sigma * np.random.normal(0, 1, size=(3,)).astype(np.float32)
-                mask0 = r < 0
-                mask1 = r >= 0
-                l0 = np.float32(limits[0])
-                l1 = np.float32(limits[1])
-                d = np.zeros((3,), dtype=np.float32)
-                d[mask0] = l0[mask0] * np.abs(r[mask0])
-                d[mask1] = l1[mask1] * np.abs(r[mask1])
-                b.location = Vector(d)
-                # r = Vector(abs(np.random.normal(0, 1, size=(3,)).astype(np.float32))) * delta * 0.5
-                # b.location = r
+    # d[mask0] = scaleLow[mask0] * np.abs(sample3D[mask0])
+    # d[mask1] = scaleUp[mask1]  * np.abs(sample3D[mask1])
+    sample3D[mask0] = scaleLow[mask0] * sample3D[mask0]
+    sample3D[mask1] = scaleUp[mask1] * sample3D[mask1]
+    for key, limits in mLimits.items():
+        if key in object.pose.bones:
+            b = object.pose.bones[key]
+            idx = bone2idx[key]
+            b.location = Vector(sample3D[idx])
 
 
 ##############################################################################################################
@@ -1236,26 +1218,28 @@ def RandomizeFace(Collection, args, sMode, **kwargs):
         Dictionary with configuration arguments
     """
 
+    # import debugpy
+
+    # debugpy.listen(5678)
+    # debugpy.wait_for_client()
+
     # Extract modifier parameters
-    fRandomizationStrength = convert.DictElementToFloat(args, "fRandomizationStrength", fDefault=0.4)
+    face_expression_sigma = convert.DictElementToFloat(args, "fRandomizationStrength", fDefault=0.4)
     iSeed = convert.DictElementToInt(args, "iSeed", iDefault=0)
 
-    print("I bins, de Batman!!!")
-    print(fRandomizationStrength)
-    print(iSeed)
+    Armatures = [o for o in bpy.data.objects if o.name.startswith("Armature.") and o.type == "ARMATURE"]
 
-    obj = bpy.data.objects["Armature.1"]
-    limits = GetLocConstraints(obj)
+    for obj in Armatures:
+        limits = GetLocConstraints(obj)
+        RandomFaceExpression(obj, limits, face_bone_correlation, face_expression_sigma)
+        success = CorrectRandomTongueExpression(obj, limits, face_expression_sigma)
+        if not success:
+            print("Tongue could not be fixed!")
+        RandomFacePose(obj)
 
-    RandomFaceExpression(obj, limits, face_bone_correlation)
-    success = CorrectRandomTongueExpression(obj, limits)
-    if not success:
-        print("Tongue could not be fixed!")
-    RandomFacePose(obj)
+        body_obj = bpy.data.objects["HG_Body"]
+        iMarkers_left = FindNearestMarkersMirrored(body_obj, iMarkers_right)
+        iMarkers = [*iMarkers_left, *iMarkers_right]
 
-    body_obj = bpy.data.objects["HG_Body"]
-    iMarkers_left = FindNearestMarkersMirrored(body_obj, iMarkers_right)
-    iMarkers = [*iMarkers_left, *iMarkers_right]
-
-    mMarkers = {i: idx for i, idx in enumerate(iMarkers) if idx >= 0}
-    SetFacialMarkers(body_obj, mMarkers)
+        mMarkers = {i: idx for i, idx in enumerate(iMarkers) if idx >= 0}
+        SetFacialMarkers(body_obj, mMarkers)
