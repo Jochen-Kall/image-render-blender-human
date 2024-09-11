@@ -85,12 +85,6 @@ face_bone_correlation = [
     ("nose_sneer_L", "nose_sneer_R", 0.5),
 ]
 
-# determines the variance in the face expressions (larger = more extreme faces, 0 = always the same face)
-# too large values result in unnatural "Fratzen" whereas small values produce average face with little variability
-# face_expression_sigma = 0.4
-
-# for the random head rotation
-head_rot_limits = [math.pi * 0.25, math.pi * 0.4, math.pi * 0.17]
 
 eye_left_center_vertex_idx = [4182, 4247]  # the vertex indices of the eye mesh giving the gaze direction
 eye_right_center_vertex_idx = [313, 1603]  # the vertex indices of the eye mesh giving the gaze direction
@@ -703,11 +697,12 @@ def RandomFaceExpression(
 
 
 ##############################################################################################################
-def RandomFacePose(object):
+def RandomFacePose(object, head_rot_limits):
     """Set the HumGen object's face rotation randomly inside the limits
 
     Args:
         object (_type_): HumGen object
+        head_rot_limits: Limits for rotation around the three axes in radians
     """
     # first, switch to edit mode
     bpy.context.view_layer.objects.active = object
@@ -1147,7 +1142,7 @@ def CheckForTongueIntersection():
 
 
 ##############################################################################################################
-def CorrectRandomTongueExpression(object, mLimits):
+def CorrectRandomTongueExpression(object, mLimits, face_expression_sigma):
     """Check whether the tongue mesh intersects the head mesh and if so sample a new tongue pose.
 
     Args:
@@ -1207,9 +1202,10 @@ def RandomizeFace(Collection, args, sMode, **kwargs):
     Only for humgen v4 humans with face controls
 
     Modifier arguments:
-        fRandomizationStrength: float in [0,1] for the strength of the randomization, i.e.
+        fFaceExpressionSigma: float in [0,1] for the strength of the randomization, i.e.
             how extreme the facial expressions are supposed to be
-        iSeed: seed for randomization
+        iSeed (integer): seed for randomization
+        lHeadRotLimits [float,float,float], default [0.25 pi, 0.4 pi, 0.17 pi]: list of max rotation angles for the head in radians
 
     Parameters
     ----------
@@ -1225,7 +1221,9 @@ def RandomizeFace(Collection, args, sMode, **kwargs):
 
     # Extract modifier parameters
     face_expression_sigma = convert.DictElementToFloat(args, "fRandomizationStrength", fDefault=0.4)
+    # [todo] actually use seed to seed RNGs...
     iSeed = convert.DictElementToInt(args, "iSeed", iDefault=0)
+    head_rot_limits = args.get("lHeadRotLimits", [math.pi * 0.25, math.pi * 0.4, math.pi * 0.17])
 
     Armatures = [o for o in bpy.data.objects if o.name.startswith("Armature.") and o.type == "ARMATURE"]
 
@@ -1235,7 +1233,7 @@ def RandomizeFace(Collection, args, sMode, **kwargs):
         success = CorrectRandomTongueExpression(obj, limits, face_expression_sigma)
         if not success:
             print("Tongue could not be fixed!")
-        RandomFacePose(obj)
+        RandomFacePose(obj, head_rot_limits)
 
         body_obj = bpy.data.objects["HG_Body"]
         iMarkers_left = FindNearestMarkersMirrored(body_obj, iMarkers_right)
