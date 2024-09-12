@@ -71,8 +71,10 @@ class anyhuman_gen_data:
                 2293,
                 4687,
             ]
-            # sparse correlation matrix among face shape bones (in range [-1..1]), if no entry in this map it is assumed to be zero,
-            # negative correlation means the corresponding bones behave opposite (e.g. when one eye is open the other is closed)
+            # sparse correlation matrix among face shape bones (in range [-1..1]),
+            # if no entry in this map it is assumed to be zero,
+            # negative correlation means the corresponding bones behave opposite
+            # (e.g. when one eye is open the other is closed)
             self.face_bone_correlation = [
                 ("eye_blink_open_L", "eye_blink_open_R", 0.6),
                 ("brow_outer_up_L", "brow_outer_up_R", 0.6),
@@ -1204,6 +1206,13 @@ def CorrectEyeGazeDirection(object, humgen_settings):
     # [todo] ask robert whats the point of this ^^
 
 
+def check_collection(collection, object):
+    if object.name in collection.objects:
+        return True
+    else:
+        return any([check_collection(child, object) for child in collection.children])
+
+
 def RandomizeFace(Collection, args, sMode, **kwargs):
     """
     Randomize the faces of all humgen v4 models in the collection.
@@ -1230,12 +1239,16 @@ def RandomizeFace(Collection, args, sMode, **kwargs):
 
     # Extract modifier parameters
     face_expression_sigma = convert.DictElementToFloat(args, "fFaceExpressionSigma", fDefault=0.4)
-    # [todo] actually use seed to seed RNGs...
     iSeed = convert.DictElementToInt(args, "iSeed", iDefault=0)
     np.random.seed(iSeed)
     head_rot_limits = args.get("lHeadRotLimits", [math.pi * 0.25, math.pi * 0.4, math.pi * 0.17])
 
-    Armatures = [o for o in bpy.data.objects if o.name.startswith("Armature.") and o.type == "ARMATURE"]
+    # Collect all Armatures in the collection
+    Armatures = [
+        o
+        for o in bpy.data.objects
+        if o.name.startswith("Armature.") and o.type == "ARMATURE" and check_collection(Collection, o)
+    ]
 
     # this should allow this code to be easily adapted to future humgen versions
     sHumgenVersion = convert.DictElementToString(args, "sHumgenVersion", "gen-07")
