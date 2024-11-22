@@ -596,7 +596,10 @@ def GetLocConstraints(arm, ignore_bones):
             continue
         for c in b.constraints:
             if c.type == "LIMIT_LOCATION":
-                mLimits[b.name] = (Vector((c.min_x, c.min_y, c.min_z)), Vector((c.max_x, c.max_y, c.max_z)))
+                mLimits[b.name] = (
+                    Vector((c.min_x, c.min_y, c.min_z)),
+                    Vector((c.max_x, c.max_y, c.max_z)),
+                )
     return mLimits
 
 
@@ -676,8 +679,12 @@ def RandomFaceExpression(
     sample3D = []
     # sample each of the 3 dimensions independently (no correlation between the axis assumed)
     for dim in range(3):
-        boneCovMatrix = boneCov[:, :, dim]  # np.reshape(boneCov, (numParams*3,numParams*3))
-        xi = np.random.multivariate_normal(mean=boneMean[:, dim], cov=boneCovMatrix, size=1)
+        boneCovMatrix = boneCov[
+            :, :, dim
+        ]  # np.reshape(boneCov, (numParams*3,numParams*3))
+        xi = np.random.multivariate_normal(
+            mean=boneMean[:, dim], cov=boneCovMatrix, size=1
+        )
         # print(xi)
         sample3D.append(np.squeeze(xi))
     sample3D = np.stack(sample3D, axis=-1)
@@ -706,27 +713,163 @@ def RandomFaceExpression(
 
 
 ##############################################################################################################
-def RandomFacePose(object, head_rot_limits):
+class HumgenNeckRotationSampler:
+
+    def __init__(
+        self,
+        head_rotation_limits=[45.0, 65.0, 30.0],
+        relative_rotation_sigma=[1 / 5.0, 1 / 2.0, 1 / 5.0],
+    ):
+        """
+        Initializes the face randomization operation with specified head rotation limits and standard deviations.
+
+        Args:
+            head_rotation_limits (list of float, optional): A list containing the maximum rotation limits
+                for pitch, yaw, and roll in degrees. Defaults to [45.0, 65.0, 30.0].
+            relative_rotation_sigma (list of float, optional): A list containing the standard deviations
+                relative to the head rotation limits for pitch, yaw, and roll. Defaults to [1/5., 1/2., 1/5.].
+        """
+
+        self.ROLL = 2
+        self.PITCH = 0
+        self.YAW = 1
+
+        self.maxRoll = np.deg2rad(head_rotation_limits[2])
+        self.maxPitch = np.deg2rad(head_rotation_limits[0])
+        self.maxYaw = np.deg2rad(head_rotation_limits[1])
+        self.minYaw = np.deg2rad(0.5 * head_rotation_limits[1])
+
+        self.std_dev_scale = np.float32([1, 1, 1])
+        self.std_dev_scale[self.PITCH] = 1.0 / 5
+        self.std_dev_scale[self.ROLL] = 1.0 / 5
+        self.std_dev_scale[self.YAW] = 1.0 / 2
+
+        self.pitch_mean = np.deg2rad(10)
+
+        self.mean = np.float32(
+            (0, 0, 0)
+        )  # Mean of the distribution for yaw, pitch, and roll
+        self.std_dev = np.float32(
+            (1, 1, 1)
+        )  # Standard deviation of the distribution for yaw, pitch, and roll
+
+        # shift the mean for the "nick"-angle to be slightly tilted forward (otherwise to many samples are looking up)
+        self.mean[self.PITCH] = self.pitch_mean
+
+        self.std_dev[self.ROLL] = self.maxRoll * self.std_dev_scale[self.ROLL]
+        self.std_dev[self.PITCH] = self.maxPitch * self.std_dev_scale[self.PITCH]
+        self.std_dev[self.YAW] = self.maxYaw * self.std_dev_scale[self.YAW]
+
+    def compute_max_yaw(self, pitch, roll):
+        q1 = mathutils.Euler((pitch, 0, roll), "XYZ").to_quaternion()
+        q2 = mathutils.Euler((0, 0, 0), "XYZ").to_quaternion()
+        # angle theta = cos^-1(2(q1.q2)^2 - 1)
+        angle = np.arccos(np.clip(2 * np.square(np.dot(q1, q2)) - 1, -1, 1))
+        # print(f"angle={np.rad2deg(angle)}")
+        angle_min_for_min_yaw = self.maxPitch
+        var_yaw = (
+            angle_min_for_min_yaw
+            * angle_min_for_min_yaw
+            / -np.log(self.minYaw / self.maxYaw)
+        )
+        curMaxYaw = self.maxYaw * np.exp(-np.square(angle) / var_yaw)
+        # print(f"maxYaw = {np.rad2deg(curMaxYaw)}")
+        return curMaxYaw
+
+    def sample_neck_rotation(self, sigma=1.0):
+        """
+        Sample an Euler XYZ rotation from a Normal distribution.
+
+        Returns:
+        tuple: Sampled Euler angles in radians (pitch,yaw,roll), i.e. Euler(XYZ).
+        """
+        roll = np.clip(
+            np.random.normal(self.mean[self.ROLL], sigma * self.std_dev[self.ROLL]),
+            -self.maxRoll,
+            self.maxRoll,
+        )
+        pitch = np.clip(
+            np.random.normal(self.mean[self.PITCH], sigma * self.std_dev[self.PITCH]),
+            -self.maxPitch,
+            self.maxPitch,
+        )
+
+        # TODO: should learn the appropriate distribution for yaw given roll and pitch since this is not a Gaussian
+        curMaxYaw = self.compute_max_yaw(pitch, roll)
+        curMaxSigmaYaw = curMaxYaw * sigma * self.std_dev_scale[self.YAW]
+
+        yaw = np.clip(
+            np.random.normal(self.mean[self.YAW], curMaxSigmaYaw), -curMaxYaw, curMaxYaw
+        )
+
+        return pitch, yaw, roll
+
+
+##############################################################################################################
+def RandomFacePose(object, head_sigma, head_rot_limits=[45.0, 65.0, 30.0]):
     """Set the HumGen object's face rotation randomly inside the limits
 
     Args:
         object (_type_): HumGen object
-        head_rot_limits: Limits for rotation around the three axes in radians
+        head_rot_limits: Limits for rotation around the three axes (Euler XYZ) in degrees
     """
     # first, switch to edit mode
     bpy.context.view_layer.objects.active = object
     # set object origin to spine to add object constraint to seat empty
     bpy.ops.object.mode_set(mode="POSE")
 
-    object.pose.bones["head"].rotation_mode = "XYZ"
-    object.pose.bones["head"].rotation_euler[2] = np.clip(
-        np.random.normal(0, 0.2 * head_rot_limits[2]), -head_rot_limits[2], head_rot_limits[2]
+    current_frame = bpy.context.scene.frame_current
+
+    # object.pose.bones["head"].rotation_mode = "XYZ"
+    # object.pose.bones["head"].rotation_euler[2] = np.clip(
+    #     np.random.normal(0, head_sigma * head_rot_limits[2]),
+    #     -head_rot_limits[2],
+    #     head_rot_limits[2],
+    # )
+    # object.pose.bones["head"].rotation_euler[1] = np.clip(
+    #     np.random.normal(0, head_sigma * head_rot_limits[1]),
+    #     -head_rot_limits[1],
+    #     head_rot_limits[1],
+    # )
+    # object.pose.bones["head"].rotation_euler[0] = np.clip(
+    #     np.random.normal(0, head_sigma * head_rot_limits[0]),
+    #     -head_rot_limits[0],
+    #     head_rot_limits[0],
+    # )
+
+    # ------ the neck rotation -------
+
+    neck_sampler = HumgenNeckRotationSampler(head_rot_limits)
+    neck_sampled_rotation = neck_sampler.sample_neck_rotation(sigma=head_sigma)
+
+    # print(np.rad2deg(neck_sampled_rotation))
+    # TODO: the head and neck bone are quite correlated and this here is just a small hack to mimick this dependence
+    # but actually this should be learned from data since the valid rotations of the head movements are tricky (6D pose manifold?)
+    # reduce the head rotation limit for the axis where the neck is already rotated strongly but keep a small sampling window
+    head_rot_limits_up = np.maximum(
+        np.float32([5, 5, 5]),
+        np.float32(head_rot_limits) - np.abs(np.rad2deg(neck_sampled_rotation)),
     )
-    object.pose.bones["head"].rotation_euler[1] = np.clip(
-        np.random.normal(0, 0.2 * head_rot_limits[1]), -head_rot_limits[1], head_rot_limits[1]
+
+    head_sampler = HumgenNeckRotationSampler(head_rot_limits_up)
+    head_sampled_rotation = head_sampler.sample_neck_rotation(sigma=0.7 * head_sigma)
+
+    # print(f"head: {np.rad2deg(head_sampled_rotation)}")
+    # print("Sampled Euler rotation:", sampled_rotation)
+
+    # Set the active selected Blender pose bone rotation with sampled_rotation
+    q_neck = mathutils.Euler(neck_sampled_rotation, "XYZ").to_quaternion()
+    q_head = mathutils.Euler(head_sampled_rotation, "XYZ").to_quaternion()
+
+    object.pose.bones["neck"].rotation_mode = "QUATERNION"
+    object.pose.bones["neck"].rotation_quaternion = q_neck
+    object.pose.bones["neck"].keyframe_insert(
+        data_path="rotation_quaternion", frame=current_frame
     )
-    object.pose.bones["head"].rotation_euler[0] = np.clip(
-        np.random.normal(0, 0.2 * head_rot_limits[0]), -head_rot_limits[0], head_rot_limits[0]
+    object.pose.bones["head"].rotation_mode = "QUATERNION"
+    object.pose.bones["head"].rotation_quaternion = q_head
+    object.pose.bones["head"].keyframe_insert(
+        data_path="rotation_quaternion", frame=current_frame
     )
 
 
@@ -794,7 +937,9 @@ def CreateAndEmptyCollection(_col_name: str):
         bpy.context.scene.collection.children.link(collection)
     # bpy.context.view_layer.active_layer_collection = collection
     # Set the active collection
-    bpy.context.view_layer.active_layer_collection = bpy.context.view_layer.layer_collection.children[collection_name]
+    bpy.context.view_layer.active_layer_collection = (
+        bpy.context.view_layer.layer_collection.children[collection_name]
+    )
 
 
 ##############################################################################################################
@@ -1017,8 +1162,12 @@ def CheckForTongueIntersection(iIgnore_body_vertices):
     bmesh.ops.triangulate(me_body, faces=me_body.faces)
 
     count = len(me_body.verts)
-    print(count)
-    body_verts = np.fromiter((x for v in me_body.verts for x in v.co), dtype=np.float32, count=len(me_body.verts) * 3)
+    # print(count)
+    body_verts = np.fromiter(
+        (x for v in me_body.verts for x in v.co),
+        dtype=np.float32,
+        count=len(me_body.verts) * 3,
+    )
     body_verts.shape = (len(me_body.verts), 3)
     # print(body_verts.shape)
     # verts = np.empty(count*3, dtype=np.float32)
@@ -1027,11 +1176,13 @@ def CheckForTongueIntersection(iIgnore_body_vertices):
     # print(bbox_ext)
 
     #    ((p>=x[0]) & (p<=x[1])).all(1)
-    result = ((body_verts > bbox_ext[np.newaxis, 0]) & (body_verts < bbox_ext[np.newaxis, 1])).all(1)
+    result = (
+        (body_verts > bbox_ext[np.newaxis, 0]) & (body_verts < bbox_ext[np.newaxis, 1])
+    ).all(1)
 
     # print(result.shape)
     trial_vert_indices_body = np.squeeze(np.argwhere(result))
-    print(trial_vert_indices_body.shape)
+    # print(trial_vert_indices_body.shape)
 
     ignoreSet = set(iIgnore_body_vertices)
     trial_vert_indices_body = [x for x in trial_vert_indices_body if x not in ignoreSet]
@@ -1046,7 +1197,11 @@ def CheckForTongueIntersection(iIgnore_body_vertices):
     # for f_idx in trial_face_idx:
     #    face = me_body.faces[f_idx]
 
-    trial_edge_idx = [e.index for idx in trial_vert_indices_body for e in me_body.verts[idx].link_edges]
+    trial_edge_idx = [
+        e.index
+        for idx in trial_vert_indices_body
+        for e in me_body.verts[idx].link_edges
+    ]
     trial_edge_idx = list(set(trial_edge_idx))
     intersect = False
     ray_origins = np.zeros((len(trial_edge_idx), 3), dtype=np.float32)
@@ -1067,7 +1222,9 @@ def CheckForTongueIntersection(iIgnore_body_vertices):
         CreateAndEmptyCollection(_col_name="mouth_samples_debug")
         randIdx = np.random.randint(0, len(ray_origins), size=(200,))
         for i, idx in enumerate(randIdx):
-            bpy.ops.mesh.primitive_cube_add(location=Vector(ray_origins[idx]), scale=Vector((0.001, 0.001, 0.001)))
+            bpy.ops.mesh.primitive_cube_add(
+                location=Vector(ray_origins[idx]), scale=Vector((0.001, 0.001, 0.001))
+            )
             cube = bpy.context.object
             cube.name = "TrialSample_{}".format(i)
     if False:
@@ -1081,31 +1238,42 @@ def CheckForTongueIntersection(iIgnore_body_vertices):
             location = Vector(v1 + dir * (rLen * 0.5))
             rotation_quat = Vector(dir).to_track_quat("Z", "Y")
             # Create a cylinder
-            bpy.ops.mesh.primitive_cylinder_add(vertices=4, radius=0.0002, depth=rLen, location=location)
+            bpy.ops.mesh.primitive_cylinder_add(
+                vertices=4, radius=0.0002, depth=rLen, location=location
+            )
             # Rotate the cylinder
             bpy.context.object.rotation_euler = rotation_quat.to_euler()
             bpy.context.object.name = "TrialSample_{}".format(i)
 
     tongue_faces = np.fromiter(
-        (v.index for f in me_tongue.faces for v in f.verts), dtype=np.int32, count=len(me_tongue.faces) * 3
+        (v.index for f in me_tongue.faces for v in f.verts),
+        dtype=np.int32,
+        count=len(me_tongue.faces) * 3,
     )
     tongue_faces.shape = (len(me_tongue.faces), 3)
     tongue_verts = np.fromiter(
-        (x for v in me_tongue.verts for x in v.co), dtype=np.float32, count=len(me_tongue.verts) * 3
+        (x for v in me_tongue.verts for x in v.co),
+        dtype=np.float32,
+        count=len(me_tongue.verts) * 3,
     )
     tongue_verts.shape = (len(me_tongue.verts), 3)
 
     # by default, Trimesh will do a light processing, which will
     # remove any NaN values and merge vertices that share position
     # if you want to not do this on load, you can pass `process=False`
-    inter_mesh = trimesh.Trimesh(vertices=tongue_verts, faces=tongue_faces, process=False)
+    inter_mesh = trimesh.Trimesh(
+        vertices=tongue_verts, faces=tongue_faces, process=False
+    )
     # inter_mesh.export("C:/tmp/debugTongue2.obj")
     # Returns
     # ---------
     # locations: (n) sequence of (m,3) intersection points
     # index_ray: (n,) int, list of ray index
     # index_tri: (n,) int, list of triangle (face) indexes
-    locations, index_ray, _ = inter_mesh.ray.intersects_location(ray_origins=ray_origins, ray_directions=ray_directions)
+
+    locations, index_ray, _ = inter_mesh.ray.intersects_location(
+        ray_origins=ray_origins, ray_directions=ray_directions
+    )
 
     hits_loc = np.float32(locations)
     # print(f"hit loc shape {hits_loc.shape}")
@@ -1123,13 +1291,17 @@ def CheckForTongueIntersection(iIgnore_body_vertices):
     # iIntersections = np.count_nonzero(hit_max_dist < hit_dist)
     iIntersections = np.argwhere(hit_max_dist > hit_dist)
     # print(iIntersections.shape)
-    print("Number of intersections = {}".format(len(iIntersections)))
+    # print("Number of intersections = {}".format(len(iIntersections)))
     inter_points = hits_loc[iIntersections[:, 0]]
     if False:
         CreateAndEmptyCollection(_col_name="mouth_intersection_points")
-        randIdx = np.arange(0, len(inter_points))  # np.random.randint(0,len(inter_points), size=(200,))
+        randIdx = np.arange(
+            0, len(inter_points)
+        )  # np.random.randint(0,len(inter_points), size=(200,))
         for i, idx in enumerate(randIdx):
-            bpy.ops.mesh.primitive_cube_add(location=Vector(inter_points[idx]), scale=Vector((0.001, 0.001, 0.001)))
+            bpy.ops.mesh.primitive_cube_add(
+                location=Vector(inter_points[idx]), scale=Vector((0.001, 0.001, 0.001))
+            )
             cube = bpy.context.object
             cube.name = "InterSample_{}".format(i)
 
@@ -1151,7 +1323,9 @@ def CheckForTongueIntersection(iIgnore_body_vertices):
 
 
 ##############################################################################################################
-def CorrectRandomTongueExpression(object, mLimits, face_expression_sigma, humgen_settings):
+def CorrectRandomTongueExpression(
+    object, mLimits, face_expression_sigma, humgen_settings
+):
     """Check whether the tongue mesh intersects the head mesh and if so sample a new tongue pose.
 
     Args:
@@ -1181,12 +1355,16 @@ def CorrectRandomTongueExpression(object, mLimits, face_expression_sigma, humgen
 
         countTrials = 0
         while countTrials < 10:
-            hasIntersection = CheckForTongueIntersection(humgen_settings.iIgnore_body_vertices)
+            hasIntersection = CheckForTongueIntersection(
+                humgen_settings.iIgnore_body_vertices
+            )
             if not hasIntersection:
                 break
             else:
                 print("Tongue is intersecting -> find a new tongue pose...")
-            r = face_expression_sigma * np.random.normal(0, 1, size=(3,)).astype(np.float32)
+            r = face_expression_sigma * np.random.normal(0, 1, size=(3,)).astype(
+                np.float32
+            )
             mask0 = r < 0
             mask1 = r >= 0
             d = np.zeros((3,), dtype=np.float32)
@@ -1234,20 +1412,30 @@ def RandomizeFace(Collection, args, sMode, **kwargs):
 
     # import debugpy
 
-    # debugpy.listen(5678)
+    # debugpy.listen(5679)
     # debugpy.wait_for_client()
 
     # Extract modifier parameters
-    face_expression_sigma = convert.DictElementToFloat(args, "fFaceExpressionSigma", fDefault=0.4)
+    face_expression_sigma = convert.DictElementToFloat(
+        args, "fFaceExpressionSigma", fDefault=0.4
+    )
+    neck_rotation_sigma = convert.DictElementToFloat(
+        args, "fNeckRotationSigma", fDefault=0.5
+    )
     iSeed = convert.DictElementToInt(args, "iSeed", iDefault=0)
     np.random.seed(iSeed)
-    head_rot_limits = args.get("lHeadRotLimits", [math.pi * 0.25, math.pi * 0.4, math.pi * 0.17])
+    head_rot_limits = args.get(
+        "lHeadRotLimits",
+        [45.0, 67.0, 30.0],  # [math.pi * 0.25, math.pi * 0.4, math.pi * 0.17]
+    )
 
     # Collect all Armatures in the collection
     Armatures = [
         o
         for o in bpy.data.objects
-        if o.name.startswith("Armature.") and o.type == "ARMATURE" and check_collection(Collection, o)
+        if o.name.startswith("Armature.")
+        and o.type == "ARMATURE"
+        and check_collection(Collection, o)
     ]
 
     # this should allow this code to be easily adapted to future humgen versions
@@ -1256,14 +1444,25 @@ def RandomizeFace(Collection, args, sMode, **kwargs):
 
     for obj in Armatures:
         limits = GetLocConstraints(obj, humgen_settings.ignore_bones)
-        RandomFaceExpression(obj, limits, humgen_settings, humgen_settings.face_bone_correlation, face_expression_sigma)
-        success = CorrectRandomTongueExpression(obj, limits, face_expression_sigma, humgen_settings)
+        RandomFaceExpression(
+            obj,
+            limits,
+            humgen_settings,
+            humgen_settings.face_bone_correlation,
+            face_expression_sigma,
+        )
+        success = CorrectRandomTongueExpression(
+            obj, limits, face_expression_sigma, humgen_settings
+        )
         if not success:
             print("Tongue could not be fixed!")
-        RandomFacePose(obj, head_rot_limits)
+
+        RandomFacePose(obj, neck_rotation_sigma, head_rot_limits)
 
         body_obj = bpy.data.objects["HG_Body"]
-        iMarkers_left = FindNearestMarkersMirrored(body_obj, humgen_settings.iMarkers_right)
+        iMarkers_left = FindNearestMarkersMirrored(
+            body_obj, humgen_settings.iMarkers_right
+        )
         iMarkers = [*iMarkers_left, *humgen_settings.iMarkers_right]
 
         mMarkers = {i: idx for i, idx in enumerate(iMarkers) if idx >= 0}
